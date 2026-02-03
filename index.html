@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yes / No Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 30px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background: #22c55e;
+            color: #000;
+        }
+
+        .no {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Do you like this website?</h2>
+
+    <button class="yes" onclick="answer('Yes')">Yes</button>
+    <button class="no" onclick="answer('No')">No</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function answer(choice) {
+        document.getElementById("result").innerText =
+            "Your answer: " + choice;
+    }
+</script>
+
+</body>
+</html>
